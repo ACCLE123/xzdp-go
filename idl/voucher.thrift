@@ -40,5 +40,5 @@ struct VoucherOrder {
 
 service VoucherService {
     list<Voucher> VoucherList(1: Empty request) (api.get="/voucher/list/:id");
-    i64 SeckillVoucher(1: Empty request) (pi.post="/seckill/:id");
+    i64 SeckillVoucher(1: Empty request) (api.post="/voucher-order/seckill/:id");
 }

@@ -28,7 +28,7 @@ func QueryShopType(ctx context.Context) ([]*shop.ShopType, error) {
 	return shopTypeList, nil
 }
 
-func QueryByID(ctx context.Context, id int64) (*shop.Shop, error) {
+func QueryShopByID(ctx context.Context, id int64) (*shop.Shop, error) {
 	var shop shop.Shop
 	err = DB.WithContext(ctx).First(&shop, id).Error
 

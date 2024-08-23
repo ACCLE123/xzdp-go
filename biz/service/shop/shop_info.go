@@ -55,6 +55,6 @@ func WrappedQueryByID(args ...interface{}) (interface{}, error) {
 		return nil, fmt.Errorf("second argument is not int")
 	}
 
-	result, err := mysql.QueryByID(ctx, id)
+	result, err := mysql.QueryShopByID(ctx, id)
 	return result, err
 }
