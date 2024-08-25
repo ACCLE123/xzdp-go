@@ -38,6 +38,14 @@ func SubSeckillStockVoucherById(ctx context.Context, tx *gorm.DB, id int64) erro
 	return nil
 }
 
+func CountSeckillOrderByUserId(ctx context.Context, tx *gorm.DB, userId int64) (count int64, err error) {
+	err = tx.WithContext(ctx).Model(&voucher.VoucherOrder{}).Where("user_id = ?", userId).Count(&count).Error
+	if err != nil {
+		return 0, err
+	}
+	return count, nil
+}
+
 func AddVoucherOrder(ctx context.Context, tx *gorm.DB, voucher *voucher.VoucherOrder) error {
 	err = tx.WithContext(ctx).Create(voucher).Error
 

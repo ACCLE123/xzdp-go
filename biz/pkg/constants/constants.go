@@ -13,6 +13,7 @@ const (
 	CACHE_SHOP_TTL           = time.Minute * 30
 	//CACHE_SHOP_TTL    = 10 * time.Second
 	LOCK_SHOP_KEY     = "lock:shop:"
+	LOCK_VOUCHER_KEY  = "lock:voucher:"
 	LOCK_KEY          = "lock:"
 	LOGIN_CODE_EXPIRE = 300
 	ID_KEY            = "id:"
